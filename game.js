@@ -81,6 +81,7 @@ function openVaultNumberPrompt() {
     if (number) {
         vaultNumber = number;
         document.getElementById('vault-number').innerText = vaultNumber;
+        document.getElementById('welcome-message').innerText = `Welcome to Vault ${vaultNumber}, Overseer!`;
         saveGame();
     }
 }
@@ -136,6 +137,7 @@ function loadGame() {
         residents = gameState.residents;
         rooms = gameState.rooms;
         document.getElementById('vault-number').innerText = vaultNumber;
+        document.getElementById('welcome-message').innerText = `Welcome to Vault ${vaultNumber}, Overseer!`;
         renderRooms();
         renderResidents();
         updateResources();
