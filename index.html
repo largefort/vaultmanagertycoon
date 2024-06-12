@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallout Tycoon Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="sidebar">
+            <h2>Resources</h2>
+            <p>Caps: <span id="caps">0</span></p>
+            <p>Food: <span id="food">0</span></p>
+            <p>Water: <span id="water">0</span></p>
+            <h2>Vault Management</h2>
+            <p>Vault Number: <span id="vault-number"></span></p>
+            <button onclick="openVaultNumberPrompt()">Set Vault Number</button>
+            <button onclick="addResident()">Add Resident</button>
+        </div>
+        <div id="main">
+            <h1>Fallout Tycoon</h1>
+            <div id="vault">
+                <p>Welcome to your Vault!</p>
+                <button onclick="buildRoom()">Build Room</button>
+                <div id="rooms"></div>
+                <div id="residents"></div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
