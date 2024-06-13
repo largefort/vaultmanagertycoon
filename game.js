@@ -7,6 +7,18 @@ let rooms = [];
 
 const SPECIAL = ["Strength", "Perception", "Endurance", "Charisma", "Intelligence", "Agility", "Luck"];
 
+function formatNumber(num) {
+    if (num >= 1e9) {
+        return (num / 1e9).toFixed(1) + 'B';
+    } else if (num >= 1e6) {
+        return (num / 1e6).toFixed(1) + 'M';
+    } else if (num >= 1e3) {
+        return (num / 1e3).toFixed(1) + 'K';
+    } else {
+        return num.toString();
+    }
+}
+
 function collectResources() {
     caps += 10;
     food += 5;
@@ -15,9 +27,9 @@ function collectResources() {
 }
 
 function updateResources() {
-    document.getElementById('caps').innerText = caps;
-    document.getElementById('food').innerText = food;
-    document.getElementById('water').innerText = water;
+    document.getElementById('caps').innerText = formatNumber(caps);
+    document.getElementById('food').innerText = formatNumber(food);
+    document.getElementById('water').innerText = formatNumber(water);
     saveGame();
 }
 
@@ -149,4 +161,3 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(produceResourcesAutomatically, 5000); // Produces resources every 5 seconds
     setInterval(randomDisaster, 30000); // Checks for disaster every 30 seconds
 });
-
