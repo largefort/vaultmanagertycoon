@@ -17,12 +17,15 @@
             <p>Vault Number: <span id="vault-number"></span></p>
             <button onclick="openVaultNumberPrompt()">Set Vault Number</button>
             <button onclick="addResident()">Add Resident</button>
+            <button onclick="buildRoom()">Build Room</button>
+            <button onclick="openTechTree()">Open Tech Tree</button>
+            <button onclick="openMarketplace()">Open Marketplace</button>
+            <button onclick="startQuest()">Start Quest</button>
         </div>
         <div id="main">
             <h1>Fallout Tycoon</h1>
             <div id="vault">
-                <p>Welcome to your Vault!</p>
-                <button onclick="buildRoom()">Build Room</button>
+                <p id="welcome-message">Welcome to your Vault!</p>
                 <div id="rooms"></div>
                 <div id="residents"></div>
             </div>
@@ -31,3 +34,4 @@
     <script src="game.js"></script>
 </body>
 </html>
+
